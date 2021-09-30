@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;  
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+}
+
+/* -------- HEADER -------*/
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 15vh;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+.logo-containter, .nav-links, .login {
+    display: flex;
+}
+
+.logo-containter {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav {
+    flex: 2;
+}
+
+.nav-links {
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav-link {
+    color: #659DBD;
+    text-decoration: none;
+}
+
+.login {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.login-button {
+    border: 2px solid rgb(215, 191, 218);
+    background-color: rgb(108, 23, 116);
+    color: rgb(215, 191, 218);
+    padding: 0.5rem;  
+    width: 5rem;
+    height: 3rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ------ MAIN -------*/
+.presentation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    min-height: 90vh;
+    align-items: center;
+}
+
+.cover {
+    background-image: url(Img/Hero.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100%;
+    box-shadow: inset 0.4rem 0.4rem 0.4rem 0.4rem black,
+                inset -0.4rem -0.4rem 0.4rem 0.4rem black;
+}
+
+.snd-cover {
+    background-image: url(Img/Howto1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100%;
+    box-shadow: inset 0.4rem 0.4rem 0.4rem 0.4rem black,
+                inset -0.4rem -0.4rem 0.4rem 0.4rem black;
+}
+
+.trd-cover {
+    background-image: url(Img/Howto2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100%;
+    box-shadow: inset 0.4rem 0.4rem 0.4rem 0.4rem black,
+                inset -0.4rem -0.4rem 0.4rem 0.4rem black;
+}
+
+.intro-text {
+    color: #659DBD;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    background: linear-gradient(to top, #659DBD, rgb(108, 23, 116));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.intro-text h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #659DBD;
+    text-align: center;
+}
+
+.intro-text p {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: #659DBD;
+    padding: 2rem;
+}
+
+.intro-text ul {
+    list-style-type: none;
+    font-size: 1.25rem;
+    color: #659DBD;
+    padding: 0px 2rem 0px;
+}
+
+.intro-text ul li span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ---------- Stories Section ------------- */
+.stories, .story {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.story {
+    width: 80%;
+    height: 80vh;
+    margin: 2rem;
+    box-sizing: border-box;
+}
+
+#CoS {
+    background-image: url(Img/CoS.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    transition: box-shadow 0.5s ease;
+}
+
+#CoS:hover {
+    box-shadow: 0.3rem -0.3rem 1rem rgb(111, 24, 48),
+    -0.3rem 0.3rem 1rem  rgb(25,12,65);
+}
+
+#OotA {
+    background-image: url(Img/OotA.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    transition: box-shadow 0.5s ease;
+}
+
+#OotA:hover {
+    box-shadow: 0.3rem -0.3rem 1rem rgb(118,124,72),
+    -0.3rem 0.3rem 1rem rgb(203,136,67);
+}
+
+#HotDQ {
+    background-image: url(Img/HotDQ.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: box-shadow 0.5s ease;
+}
+
+#HotDQ:hover {
+    box-shadow: 0.3rem -0.3rem 1rem rgb(139,147,222),
+    -0.3rem 0.3rem 1rem rgb(98,185,155);
+}
+
+.des {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.des:hover {
+    background-color: rgba(0, 0, 0, 0.37);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.text-wrap {
+    margin: auto;
+}
+
+.des h3, .des p {
+    color:rgb(215, 191, 218);
+    text-shadow: 2px 2px 3px black, -2px -2px 3px black;
+}
+
+.des h3 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.des p {
+    font-size: 1.5rem;
+}
+
+/* ----- Call to Action ---- */
+.cta {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0.3rem 0px;
+}
+
+.cta-select {
+    border: 2px solid rgb(108, 23, 116);
+    color: rgb(108, 23, 116);
+    background: rgb(215, 191, 218);
+    width: 20rem;
+    height: 6rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.cta-create {
+    border: 2px solid rgb(215, 191, 218);
+    color: rgb(215, 191, 218);
+    background: rgb(108, 23, 116);
+    width: 20rem;
+    height: 6rem;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0px 0px 0px 2rem;
+    box-sizing: border-box;
+}
+
+/* -------- SIGN UP/FORM ---------- */
+.form-wrap {
+    background-image: url(Img/Tasha.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem;
+    box-shadow: inset 0.4rem 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5),
+    inset -0.4rem -0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.border-shadow {
+    box-shadow: inset 0.4rem 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5),
+    inset -0.4rem -0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    background: linear-gradient(to top, #659DBD, rgb(108, 23, 116));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#form-headers {
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    padding: 1rem;
+    margin: 0px;
+    text-align: center;
+    text-justify: center;
+}
+
+#form-headers h3 {
+    color:rgb(108, 23, 116);
+    text-align: center;
+    margin: auto;
+}
+
+.element-wrap {
+    margin: 1.5rem;
+}
+
+.form-label {
+    color:rgb(243, 233, 245);   
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.form-text {
+    color:rgb(243, 233, 245);
+    font-size: 0.8rem;
+    text-shadow: 1.5px 1.5px 2px black,
+    -1.5px -1.5px 2px black;
+}
+
+/* -------- FOOTER -----------*/
+
+footer {
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.authorship p {
+    color: #659DBD;
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-media {
+    width: 100%;
+    text-align: center;
+}
+
+.social-media i {
+    background: linear-gradient(to top, #659DBD, rgb(108, 23, 116));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-info, .contact-info p a {
+    width: 100%;
+    color: #659DBD;
+    text-decoration: none;
+}
+
+.contact-info p span {
+    font-weight: bold;
+    color:rgb(108, 23, 116);
+    text-transform: uppercase;
+}
