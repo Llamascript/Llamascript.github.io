@@ -69,6 +69,11 @@ nav {
     cursor: pointer;
 }
 
+.button-link {
+    text-decoration: none;
+    color: rgb(215, 191, 218);
+}
+
 /* ------ MAIN -------*/
 .presentation {
     display: flex;
@@ -342,6 +347,10 @@ h1 {
     font-size: 0.8rem;
     text-shadow: 1.5px 1.5px 2px black,
     -1.5px -1.5px 2px black;
+}
+
+.form-hidden {
+    display: none;
 }
 
 /* -------- FOOTER -----------*/
