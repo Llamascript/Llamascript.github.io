@@ -29,6 +29,10 @@ header {
   overflow: hidden;
 }
 
+.menu {
+    display: none
+}
+
 .logo-containter, .nav-links, .login {
     display: flex;
     width: 25%;
@@ -430,13 +434,75 @@ footer {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 767px) {
-    html {
-        font-size: 20px;
+@media only screen and (max-width: 767px) {
+    *, html {
+        font-size: 12px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2%;
+        width: 95vw;
+        height: 10vh;
+        margin: auto;
+        justify-content: center;        
+        position: sticky;
+        top: 0px;
+        background-color: black;
+    }
+
+    .nav-links, .login {
+        display: none;
+    }
+
+    .logo-container {
+        grid-column: 1/2;
+    }
+
+    .menu {
+        display: inline;
+        grid-column: 3;
+    }
+
+    .presentation {
+        max-width: 95vw;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .cover {
+        background-image: url(Img/Hero.png);
+        width: 95vw;
+        height: 30vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-shadow: none;
+        background-attachment: scroll;
+        overflow: hidden;
+    }
+
+    .cta {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .cta-select, .cta-create {
+        width: 40vw;
+        height: 10vh;
+        padding: 2px;
+        margin: 0px;
+    }
+
+    .contact-info {
+        padding-bottom: 1vh;
     }
 }
 
-@media screen and (min-width: 768px)and(max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     html {
         font-size: 14px;
     }
