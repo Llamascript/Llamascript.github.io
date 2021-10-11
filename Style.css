@@ -71,7 +71,7 @@ nav {
 
 .button-link {
     text-decoration: none;
-    color: rgb(215, 191, 218);
+    color: rgb(108, 23, 116);
 }
 
 /* ------ MAIN -------*/
@@ -278,6 +278,14 @@ nav {
     font-size: 2rem;
     margin: 0px 0px 0px 2rem;
     box-sizing: border-box;
+}
+
+#cta-link-stories {
+    color:rgb(108, 23, 116);
+}
+
+#cta-link-signup {
+    color:rgb(215, 191, 218);
 }
 
 /* -------- SIGN UP/FORM ---------- */
