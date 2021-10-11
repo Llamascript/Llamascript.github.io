@@ -10,6 +10,7 @@
     <link href="/Style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c4bc77b9d5.js" crossorigin="anonymous"></script>
+    <script src="LoginSys.js"></script>
     <title>Sign up</title>
 </head>
 <body>
@@ -35,9 +36,27 @@
     </header>
     <main>
         <div class="form-wrap">
-            <div class="text-wrap">                
-                <h1>Create your account!</h1>
-                <form action="Data.html" method="POST" target="_blank">
+            <div class="form-text-wrap">
+                <!--- ---------------- SIGN IN FORM ---------------- --->
+                <form class="form form-hidden" id="Sign-in-Form">
+                    <h1>Log into your account!</h1>
+                    <div class="element-wrap">
+                        <input type="text" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="element-wrap">
+                        <input type="password" class="form-control" placeholder="Password" minlength="8" required>
+                    </div>
+                    <div class="element-wrap">
+                    <a class="form-text" href="#">Forgot your password?</a>
+                    </div>
+                    <div class="element-wrap">
+                        <a class="form-text" href="#" id="Link-Signup">Don't have an account? Sign up!</a>
+                    </div>
+                </form>
+
+                <!--- ---------------- SIGN UP FORM ---------------- --->
+                <form class="form" id="Sign-up-Form">
+                    <h1>Create your account!</h1>
                     <div class="element-wrap">
                         <input type="text" id="Name" class="form-control" placeholder="John Doe" required>
                         <div id="Help-text" class="form-text">Your name will only be visible in your profile.</div>
@@ -49,6 +68,10 @@
                     <div class="element-wrap">
                         <input type="password" class="form-control" placeholder="Password" minlength="8" required>
                         <div id="Help-text" class="form-text">Your password must be 8 characters long. No special characters, please! You can use spaces, though</div>
+                    </div>
+                    <div class="element-wrap">
+                        <input type="password" class="form-control" placeholder="Confirm your password" minlength="8" required>
+                        <div id="Help-text" class="form-text">Please, confirm your password.</div>
                     </div>
                     <div class="element-wrap">
                         <input type="email" class="form-control" placeholder="myemail@example.com" required>
@@ -78,6 +101,9 @@
                     </div>
                     <div class="element-wrap" id="Submit">
                         <button type="submit" class="btn btn-primary">Sign up!</button>
+                    </div>
+                    <div class="element-wrap">
+                        <a class="form-text" href="#" id="Link-Login">Already have an account? Sign in!</a>
                     </div>
                 </form>
             </div>
