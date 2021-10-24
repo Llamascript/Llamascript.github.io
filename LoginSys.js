@@ -1,8 +1,8 @@
-const LoginForm = document.querySelector('#Sign-in-Form');
-const SignupForm = document.querySelector('#Sign-up-Form');
-
 document.addEventListener('DOMContentLoaded', () => {
     // --------- Sign in and Sign up Forms  -------------- //
+    const LoginForm = document.querySelector('#Sign-in-Form');
+    const SignupForm = document.querySelector('#Sign-up-Form');
+
     document.querySelector('#Link-Signup').addEventListener('click', () => {
         LoginForm.classList.add('form-hidden');
         SignupForm.classList.remove('form-hidden');
@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
  // ------------- FORM VALIDATION ----------- //
  window.onload = start;
 
- const suSubmit = document.querySelector('Submit') 
+ const LoginForm = document.querySelector('#Sign-in-Form');
+ const SignupForm = document.querySelector('#Sign-up-Form');
+ const suSubmit = document.querySelector('#suSubmit') 
+
  var fullname = document.querySelector('#Name');
 
 function start() {
@@ -25,7 +28,7 @@ function start() {
 
 // -------------- NAME VALIDATION --------------- //
 function nameValidation() {
-    if (/^[a-zA-Z ]+$-?'?/.test(fullname.value)) {  //ojo con el - //
+    if (/^[a-zA-Z ]+$/.test(fullname.value)) {
         return true;
     } else {
     alert('Your name should only have valid characters.');
@@ -36,7 +39,6 @@ function nameValidation() {
  function validate(event) {
      if (!nameValidation()) {
          event.preventDefault();
-         event.stopPropagation();
          return false;
      }
  }
