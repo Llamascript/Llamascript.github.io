@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
  const suSubmit = document.querySelector('#suSubmit') 
 
  var fullname = document.querySelector('#Name');
+ var username = document.querySelector('#Username');
+ var password = document.querySelector('#Password');
+ var email = document.querySelector('#Email');
+ var passConf = document.querySelector('#Confirm');
 
 function start() {
     SignupForm.addEventListener('submit', validate, false);
@@ -28,7 +32,7 @@ function start() {
 
 // -------------- NAME VALIDATION --------------- //
 function nameValidation() {
-    if (/^[a-zA-Z ]+$/.test(fullname.value)) {
+    if (/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/.test(fullname.value)) {
         return true;
     } else {
     alert('Your name should only have valid characters.');
@@ -36,9 +40,50 @@ function nameValidation() {
     }
  }
 
- function validate(event) {
-     if (!nameValidation()) {
-         event.preventDefault();
-         return false;
-     }
- }
+// ------------- USERNAME VALIDATION ------------- //
+function userValidation() {
+    if (/^[a-zA-Z0-9ñÑ(-._) ]+$/.test(username.value)) {
+        return true;
+    } else {
+        alert('Choose a valid username.')
+        return false;
+    }
+}
+
+// ------------- PASSWORD VALIDATION ------------- //
+function passValidation() {
+    if (/^[a-zA-Z0-9ñÑ ]+$/.test(password.value)) {
+        var toConfirm = password.value;
+        return true;
+    } else {
+        alert('Password must not contain special characters.');
+        return false;
+    }
+}
+
+// -------------- CONFIRM PASS VALIDATION ------------- //
+function confirmPassword() {
+    if (toConfirm === passConf.value) {
+        return true;
+    } else {
+        alert('Your password doesn\'t match.');
+        return false;
+    }
+}
+
+// ------------- EMAIL VALIDATION -------------- //
+function emailValidation() {
+    if (!/(^[a-zA-Z(-._)0-9]+)@[a-zA-Z]+[.(com|ar|gov|net)]+.test(email.value)/.test(email.value)) {
+        alert('Please, use a valid email.');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validate(event) {
+    if (!nameValidation() || !userValidation() || !passValidation() || !confirmPassword() || !emailValidation()) {
+        event.preventDefault();
+        return false;
+    }
+}
