@@ -72,7 +72,7 @@ function confirmPassword() {
 
 // ------------- EMAIL VALIDATION -------------- //
 function emailValidation() {
-    if (!/(^[a-zA-Z(-._)0-9]+)@[a-zA-Z]+[.(com|ar|gov|net)]+/.test(email.value)) {
+    if (!/(^[a-zA-Z(-._)0-9]+)@[a-zA-Z]+[.(com|ar|gov|net)]+$/.test(email.value)) {
         alert('Please, use a valid email.');
         return false;
     } else {
