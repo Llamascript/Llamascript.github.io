@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
  var fullname = document.querySelector('#Name');
  var username = document.querySelector('#Username');
  var password = document.querySelector('#Password');
- var email = document.querySelector('#Email');
+ var toConfirm = '';
  var passConf = document.querySelector('#Confirm');
+ var email = document.querySelector('#Email');
 
 function start() {
     SignupForm.addEventListener('submit', validate, false);
@@ -53,7 +54,7 @@ function userValidation() {
 // ------------- PASSWORD VALIDATION ------------- //
 function passValidation() {
     if (/^[a-zA-Z0-9ñÑ ]+$/.test(password.value)) {
-        var toConfirm = password.value;
+        toConfirm = password.value;
         return true;
     } else {
         alert('Password must not contain special characters.');
