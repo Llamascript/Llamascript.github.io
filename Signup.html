@@ -48,6 +48,9 @@
                     <div class="element-wrap">
                         <input type="password" class="form-control" placeholder="Password" minlength="8" required>
                     </div>
+                    <div class="element-wrap" id="Submit">
+                        <button type="submit" id="siSubmit" class="btn btn-primary">Sign in!</button>
+                    </div>
                     <div class="element-wrap">
                     <a class="form-text" href="#">Forgot your password?</a>
                     </div>
@@ -64,11 +67,11 @@
                         <div id="Help-text" class="form-text">Your name will only be visible in your profile.</div>
                     </div>
                     <div class="element-wrap">
-                        <input type="text" class="form-control" placeholder="Screen name" required>
+                        <input type="text" id="Username"class="form-control username" placeholder="Screen name" required>
                         <div id="Help-text" class= "form-text">Username to be displayed to other players.</div>
                     </div>
                     <div class="element-wrap">
-                        <input type="password" class="form-control" placeholder="Password" minlength="8" required>
+                        <input type="password" id="Password" class="form-control password" placeholder="Password" minlength="8" required>
                         <div id="Help-text" class="form-text">Your password must be 8 characters long. No special characters, please! You can use spaces, though</div>
                     </div>
                     <div class="element-wrap">
@@ -76,7 +79,7 @@
                         <div id="Help-text" class="form-text">Please, confirm your password.</div>
                     </div>
                     <div class="element-wrap">
-                        <input type="email" class="form-control" placeholder="myemail@example.com" required>
+                        <input type="email" id="Email"class="form-control" placeholder="myemail@example.com" required>
                         <div id="Help-text" class="form-text">Your email won't be displayed unless requested.</div>
                     </div>
                     <div class="element-wrap">
@@ -102,7 +105,7 @@
                           </div>
                     </div>
                     <div class="element-wrap" id="Submit">
-                        <button type="submit" class="btn btn-primary">Sign up!</button>
+                        <button type="submit" id="suSubmit" class="btn btn-primary">Sign up!</button>
                     </div>
                     <div class="element-wrap">
                         <a class="form-text" href="#" id="Link-Login">Already have an account? Sign in!</a>
@@ -129,5 +132,6 @@
             <p><span>Teléfono:</span> (+54) 11 xxxx-xxxx</p>
         </div>
     </footer>
+    <script src="LoginSys.js"></script>
 </body>
 </html>
