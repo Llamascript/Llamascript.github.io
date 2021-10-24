@@ -62,7 +62,7 @@ function passValidation() {
 
 // -------------- CONFIRM PASS VALIDATION ------------- //
 function confirmPassword() {
-    if (password.value === passConf.value) {
+    if (password.value == passConf.value) {
         return true;
     } else {
         alert('Your password doesn\'t match.');
