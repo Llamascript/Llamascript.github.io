@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
  var fullname = document.querySelector('#Name');
  var username = document.querySelector('#Username');
  var password = document.querySelector('#Password');
- var toConfirm = '';
  var passConf = document.querySelector('#Confirm');
  var email = document.querySelector('#Email');
 
@@ -54,7 +53,6 @@ function userValidation() {
 // ------------- PASSWORD VALIDATION ------------- //
 function passValidation() {
     if (/^[a-zA-Z0-9ñÑ ]+$/.test(password.value)) {
-        toConfirm = password.value;
         return true;
     } else {
         alert('Password must not contain special characters.');
@@ -64,7 +62,7 @@ function passValidation() {
 
 // -------------- CONFIRM PASS VALIDATION ------------- //
 function confirmPassword() {
-    if (toConfirm === passConf.value) {
+    if (password.value === passConf.value) {
         return true;
     } else {
         alert('Your password doesn\'t match.');
