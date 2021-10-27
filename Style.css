@@ -673,6 +673,39 @@ footer {
     .form-wrap {
         background-image: none;
     }
+
+    /* ------- EASTER EGG -------- */
+    .easter-div {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .easter-snl {
+        width: 60vw;
+        height: 40vw;
+        margin: auto;
+    }
+    
+    .easter-egg {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+        color: black;
+        font-size: 3rem;
+    }
+    
+    .the-egg:hover {
+        cursor: pointer;
+    }
+    
+    .hide-surprise {
+        display: none;
+    }
+    
+    .surprise {
+        height: 40vh;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
