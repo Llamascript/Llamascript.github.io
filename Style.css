@@ -464,7 +464,7 @@ footer {
     }
 
     .menu {
-        display: block;
+        display: flex;
         position: fixed;
         transform: translateY(-100%);
         transition: transform 0.2s;
@@ -474,10 +474,25 @@ footer {
         bottom: 0;
         z-index: 99;
         background-color: rgb(108, 23, 116);
-        color: rgb(243, 233, 245);
-        text-decoration: none;
         list-style-type: none;
         padding-top: 4%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .menu-item {
+        text-decoration: none;
+        list-style-type: none;
+        color: rgb(243, 233, 245);
+        font-size: 2rem;
+        padding-left: 4%;
+        margin: auto;
+        margin-top: 4;
+    }
+
+    .menu-item:hover {
+        color:rgb(215, 191, 218);
+        transition: color 0.2s;
     }
 
     .show-menu {
