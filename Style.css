@@ -439,6 +439,39 @@ footer {
     text-transform: uppercase;
 }
 
+/* ------------ EASTER EGG ------------ */
+.easter-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.easter-snl {
+    width: 60vw;
+    height: 40vw;
+    margin: auto;
+}
+
+.easter-egg {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    color: black;
+    font-size: 3rem;
+}
+
+.the-egg:hover {
+    cursor: pointer;
+}
+
+.hide-surprise {
+    display: none;
+}
+
+.surprise {
+    height: 90vh;
+}
+
 @media only screen and (max-width: 767px) {
     *, html {
         font-size: 12px;
@@ -483,7 +516,7 @@ footer {
     .menu-item {
         text-decoration: none;
         list-style-type: none;
-        color: rgb(243, 233, 245);
+        color: #659DBD;
         font-size: 2rem;
         padding-left: 4%;
         margin: auto;
@@ -491,7 +524,7 @@ footer {
     }
 
     .menu-item:hover {
-        color:rgb(215, 191, 218);
+        color:#175e86;
         transition: color 0.2s;
     }
 

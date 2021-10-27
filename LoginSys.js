@@ -108,3 +108,20 @@ function toggleMenu() {
 }
 
 hamburger.addEventListener('click', toggleMenu);
+
+// -------------------- EASTER EGG ----------------- //
+const egg = document.querySelector('.the-egg');
+const surprise = document.querySelector('.surprise')
+
+function showSurprise() {
+    if (surprise.classList.contains('hide-surprise')) {
+        surprise.classList.remove('hide-surprise');
+        egg.style.color = 'white';        
+        alert('You found the easter egg!');
+    } else {
+        egg.classList.add('hide-surprise');
+        egg.style.color = 'black';
+    }
+}
+
+egg.addEventListener('click', showSurprise)
