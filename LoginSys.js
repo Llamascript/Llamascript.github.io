@@ -125,3 +125,45 @@ function showSurprise() {
 }
 
 egg.addEventListener('click', showSurprise)
+
+// ------------- CONTACT FORM VALIDATION ----------- //
+window.onload = comment;
+
+const contactForm = document.querySelector('#contact-form');
+const coSubmit = document.querySelector('#coSubmit') 
+
+var fullname = document.querySelector('#Alias');
+var contactEmail = document.querySelector('#Contact-Email');
+
+function comment() {
+   contactForm.addEventListener('submit', validateContact, false);
+}
+
+   // ------------ ALIAS VALIDATION ------------ //
+function aliasValidation() {
+    if (/^[a-zA-Z0-9ñÑ(-._) ]+$/.test(alias.value)) {
+        return true;
+    } else {
+        alert('Choose a valid alias.')
+        return false;
+    }
+}
+    //------------ CONTACT EMAIL VALIDATION ------ //
+function contactEmailValidation() {
+    if (!/[a-zA-Z-._0-9]+@[a-zA-Z]+.(com|ar|gov|net)+/.test(email.value)) {
+        alert('Please, use a valid email.');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validateContact(event) {
+    if (!aliasValidation() || !contactEmailValidation()) {
+        event.preventDefault();
+        return false;
+    }
+}
+
+// -------------------------------------------- //
+// -------------------  ---------------------- //
