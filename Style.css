@@ -704,7 +704,8 @@ footer {
     }
     
     .surprise {
-        height: 40vh;
+        width: 70%;
+        max-width: 70%;
     }
 }
 
