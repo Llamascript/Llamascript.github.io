@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://kit.fontawesome.com/c4bc77b9d5.js" crossorigin="anonymous"></script>
     <title>Curse of Strahd</title>
 </head>
 <body>
-    
+    <header>
+        <div class="logo-container">
+          <a href="/index.html">
+            <img id="header-logo"
+            src="Img/logo.png"
+            alt="Llamascript: Just Llama Stuff logo by Designevo.com"
+            width="83%"
+            />
+          </a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li ><a class="nav-link" href="/Howto.html">How to play</a></li>
+            <li ><a class="nav-link" href="/Stories.html">Stories</a></li>
+            <li ><a class="nav-link" href="/Contact.html">Contact me</a></li>
+            <li ><a class="nav-link" href="/Easter.html">Easter Egg</a></li>
+          </ul>
+        </nav>
+        <div class="login"><button class="login-button"><a class="button-link" href="/Signup.html">Sign in</a></button></div>
+        <ul class="menu">
+          <li><a href="/Howto.html" class="menu-item">How to play</a></li>
+          <li><a href="/Stories.html" class="menu-item">Stories</a></li>
+          <li><a href="/Contact.html" class="menu-item">Contact me</a></li>
+          <li><a href="/Easter.html" class="menu-item">Easter Egg</a></li>
+        </ul>
+        <button class="hamburger">
+          <i class="fas fa-bars menu-icon"></i>
+          <i class="fas fa-times close-icon"></i>
+        </button>
+    </header>
+    <main>
+        <div id="app">
+            <div class="chapter">
+                <h1>Curse of Strahd</h1>
+                <h3>Chapter 1</h3>
+                <section id="chapter1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fuga illum laboriosam nisi deleniti culpa, animi eaque dolor quos voluptas ea! Ut sed laudantium sit nihil a excepturi qui corrupti reprehenderit unde aut commodi expedita aliquam esse dolor nemo, id quo, non provident. Illum laborum amet aperiam quia error animi!
+                    </p>
+                    <div class="choices">
+                        <button class="opt1" v-on:click='toggleChapter2a'>Option 1</button>
+                        <button class="opt2" href="#">Option 2</button>
+                        <button class="opt3" href="#">Option 3</button>
+                        <button class="opt4" href="#">Option 4</button>
+                    </div>
+                </section>
+                <section id="chapter2" v-show='chapter2a'>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum ipsam architecto obcaecati nam temporibus unde ea sint eaque in consequatur facere magnam cum commodi, eos ex. Numquam, in alias pariatur soluta, libero recusandae perferendis eos iure laudantium, quaerat earum impedit quod possimus. Nam, reprehenderit! Ipsam consectetur quis harum ab?
+                    </p>
+                    <div class="choices">
+                        <button class="opt1" href="#">Option 1</button>
+                        <button class="opt2" href="#">Option 2</button>
+                        <button class="opt3" href="#">Option 3</button>
+                        <button class="opt4" href="#">Option 4</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>      
+        <div class="authorship">
+          <p>This images do not belong to me (except for the logo). They were pulled out from the internet.
+            Thanks to Wizards of the cost for that. If some of the art displayed here belongs to you, please contact me!
+            I want to give credit where credit's due.
+          </p>
+        </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com/DominicCanisLupus" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/EzequielConZ_" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/dommymartinez_/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/Llamascript" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="contact-info">
+            <p><span>E-mail:</span> <a href="mailto:ezekielmtz@gmail.com">ezekielmtz@gmail.com</a></p>
+            <p><span>Teléfono:</span> (+54) 11 xxxx-xxxx</p>
+        </div>
+    </footer>
+    <script src="/LoginSys.js"></script>
+    <script src = "/vue.min.js"></script>
 </body>
 </html>

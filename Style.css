@@ -135,7 +135,7 @@ nav {
     max-height: inherit;
 }
 
-.intro-text h1 {
+.intro-text h1, .chapter h1 {
     font-size: 3rem;
     font-weight: 500;
     background: linear-gradient(to top, #659DBD, rgb(108, 23, 116));
@@ -145,7 +145,7 @@ nav {
     text-align: center;
 }
 
-.intro-text h3 {
+.intro-text h3, .chapter h3 {
     margin-top: 1%;
     margin-bottom: 2%;
     font-size: 1.5rem;
@@ -518,6 +518,49 @@ footer {
 
 .surprise {
     height: 90vh;
+}
+
+/* --------- CHAPTERS --------- */
+section {
+    width: 90vw;
+    margin: auto;
+    font-size: 1rem;
+    color: #659DBD;
+    margin-bottom: 2vh;
+}
+
+.choices {
+    display: grid;
+    grid-template-areas: 
+    "opt1 opt2"
+    "opt3 opt4";
+    column-gap: 2%;
+    row-gap: 1vh;
+    width: 70%;
+    height: 30vh;
+    padding: 4%;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.choices button {
+    Height: 100%;
+    justify-self: center;
+    background-color: rgb(108, 23, 116);
+    border: 2px rgb(243, 233, 245) solid;
+    color: rgb(243, 233, 245);
+    border-radius: 7px;
+    padding: 4%;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.choices button:hover {
+    background-color: rgb(215, 191, 218);
+    border: 2px rgb(108, 23, 116) solid;
+    color:rgb(108, 23, 116);
+    transition: all 0.2s ease;
 }
 
 @media only screen and (max-width: 767px) {
