@@ -410,6 +410,32 @@ a {
     padding: 1rem;
 }
 
+/* ----------- CREATE FORM ---------- */
+.cel-img-create {
+    display: none;
+}
+
+.Create-Wrap {
+    background-image: url(Img/Create.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0.4rem 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5),
+    inset -0.4rem -0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+.character-info {
+    width: 100%;
+}
+
 /* -------- FOOTER -----------*/
 
 footer {
@@ -712,6 +738,22 @@ footer {
         background-image: none;
     }
 
+ /* ----------- CREATE form ---------- */
+ .cel-img-create {
+    display: block;
+    background-image: url(Img/Create.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 95vw;
+    height: 30vh;
+    margin: auto;
+}
+
+.Create-Wrap {
+    background-image: none;
+}
+
 /* ------- EASTER EGG -------- */
     .easter-div {
         display: flex;
@@ -940,6 +982,32 @@ footer {
     }
 
     #contact-wrap {
+        background-image: none;
+    }
+
+    .form-wrap {
+        background-image: none;
+        margin: auto;
+        padding: 2vh 0px;
+    }
+
+    .form-text-wrap {
+        margin: 0px;
+        width: 100%;
+    }
+    /* ------ CREATE FORM ---------- */
+    .cel-img-create {
+        display: block;
+        background-image: url(Img/Create.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 95vw;
+        height: 30vh;
+        margin: auto;
+    }
+
+    #Create-Wrap {
         background-image: none;
     }
 }
