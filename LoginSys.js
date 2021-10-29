@@ -167,3 +167,16 @@ function validateContact(event) {
 
 // --------------------------------------------------- //
 // ------------------- CHAPTERS ---------------------- //
+const app = new Vue(
+    {
+        el: '#app',
+        data: {
+            isVisible: false
+        },
+        methods: {
+            toggleChapter(){
+                this.isVisible = !this.isVisible;
+            }
+        }
+    }
+)

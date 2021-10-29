@@ -9,7 +9,7 @@
     <title>Curse of Strahd</title>
 </head>
 <body>
-    <header>
+  <header>
         <div class="logo-container">
           <a href="/index.html">
             <img id="header-logo"
@@ -38,36 +38,162 @@
           <i class="fas fa-bars menu-icon"></i>
           <i class="fas fa-times close-icon"></i>
         </button>
-    </header>
-    <main>
-        <div id="app">
-            <div class="chapter">
-                <h1>Curse of Strahd</h1>
-                <h3>Chapter 1</h3>
-                <section id="chapter1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fuga illum laboriosam nisi deleniti culpa, animi eaque dolor quos voluptas ea! Ut sed laudantium sit nihil a excepturi qui corrupti reprehenderit unde aut commodi expedita aliquam esse dolor nemo, id quo, non provident. Illum laborum amet aperiam quia error animi!
-                    </p>
-                    <div class="choices">
-                        <button class="opt1" v-on:click='toggleChapter2a'>Option 1</button>
-                        <button class="opt2" href="#">Option 2</button>
-                        <button class="opt3" href="#">Option 3</button>
-                        <button class="opt4" href="#">Option 4</button>
-                    </div>
-                </section>
-                <section id="chapter2" v-show='chapter2a'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum ipsam architecto obcaecati nam temporibus unde ea sint eaque in consequatur facere magnam cum commodi, eos ex. Numquam, in alias pariatur soluta, libero recusandae perferendis eos iure laudantium, quaerat earum impedit quod possimus. Nam, reprehenderit! Ipsam consectetur quis harum ab?
-                    </p>
-                    <div class="choices">
-                        <button class="opt1" href="#">Option 1</button>
-                        <button class="opt2" href="#">Option 2</button>
-                        <button class="opt3" href="#">Option 3</button>
-                        <button class="opt4" href="#">Option 4</button>
-                    </div>
-                </section>
-            </div>
+  </header>
+  <main>
+    <div class="chapter" id="app">
+      <h1>Curse of Strahd</h1>
+      <h3>Chapter 1</h3>
+      <div class="section-img" id="img-section1a"></div>
+      <section id="section1">
+        <h3>Mysterious visitors</h3>
+        <p>Duchess Morwen of Daggerford invited you for dinner. No stranger to Daggerford, you have
+          come to the town's defense on more than one occasion, and you count Lady Morwen as a friend
+          and a benefactor.</p>
+        <p>A cool autumn breeze blows through the streets as you make your way to the keep. As you dine on
+          hot, spicy soup and tenderly cooked pheasant, you can tell that the duchess seems more out of sorts than usual.
+          Then a pall comes over the occasion as she voices her concern about a band of wayward travelers camped outside
+          the town's walls. They seemed harmless at first, but Morwen has received reports that they have begun harassing
+          townsfolk and other visitors as they come and go, demanding money and wine, and threatening to put
+          hexes on anyone who doesn't pay up.
+        </p>
+        <p>Yesterday, the duchess ordered several guards to scare away the mysterious visitors, but they couldn't
+          get the job done. When the guards returned, they spoke sympathetically about the visitors. It seemed
+          as if the guards had been magically charmed.
+        </p>
+        <p>Morwen doesn't want an armed conflict, but she aims to send a stern message to the visitors and asks
+          you to deliver it on her behald: "If they don't leave before dawn," she says, "I'll burn their wagons
+          to the ground."
+        </p>
+        <p>Immediately after dinner, you set off to the deliver the message to the visitors. The travelers are camped
+          on the hill outside the gates of Daggerford, near the roads. Guards atop the walls watch the camp closely at all hours.
+        </p>
+        <p>As the evening grows dark, you see a dozen men and women gathered around a crackling bonfire. The folk are in good spirits.
+          A few of them sing and dance around the fire while others find happiness in their flasks and wineskins. Three barrel-topped
+          wagons are parked at odd angles. Tied to a nearby tree, grazing, are half a dozen draft horses wearing bright coats with
+          bangles and tassels.
+        </p>
+        <div class="choices">
+          <button class="opt1" @click='toggleSection2a'>Approach them and deliver the message</button>
+          <button class="opt2" @click='toggleSection2b'>Keep watching</button>
+          <button class="opt3" @click='toggleSection2c'>Attack the travelers</button>
+          <button class="opt4" @click='toggleSection2d'>Leave Daggerford</button>
         </div>
-    </main>
-    <footer>      
+      </section>
+      <section id="section2a" v-show="is2a">
+        <div class="section-img" id="img-section2a"></div>
+        <p>An old man sees you walking towards them and introduces himself: "We've been waiting for you! My name's Stanimir. Come sit with us."
+          As you sit around the bonfire, suspicious of the visitors, a young woman and his brother join Stanimir. "This is my daughter, Damia, and my son, Ratka.
+          You can trust them," he says. After eying them, you deliver the message.
+        </p>
+        <p>Stanimir laughs: "Don't worry. We have no wish to make enemies of Lady Morwen. I have a story to tell you. First you listen, then we go."
+          Stanimir fills his mouth with wine, then spits into the fire. The flames turn from orange to green. As they dance and sway, a
+          dark shape appears in the bonfire's core.
+        </p>
+        <p>"We come from an ancient land whose name is long forgotten —a land of kings. Our enemies forced us from our homes, and now
+          we wander the lost roads."
+        </p>
+        <p>The dark shape in the fire takes the form of a man being knocked from his horse, a spear piercing his side.</p>
+        <p>Stanimir continues. "One night, a wounded soldier staggered into our camp and collapsed. We nursed his terrible injury
+           and quenched his thirst with wine. He survived. When we asked him who he was, he wouldn't say. All he wanted was to return home, 
+           but we were deep in the ands of his enemies. We took him as one of our own and followed him back toward his homeland. His enemies
+            hunted him. They said he was a prince, yet we didn't give him up, even when their assassins fell upon us like wolves."
+        </p>
+        <p>Deep in the bonfire, you see a dark figure standing with sword drawn, fighting off a host of shadowy shapes.</p>
+        <p>"This man of royal blood fought to protect us, as we protected him. We bore him safely to his home, and he thanked us. 
+          He said, 'I owe you my life. Stay as long as you wish, leave when you choose, and know that you will always be safe here.'"
+        </p>
+        <p>The figure in the dancing fire vanquishes its final foe, then disperses in a cloud of smoke and embers.</p>
+        <p>Stanimir's face becomes a somber mask. "A curse has befallen our noble prince, turning him into a tyrant. We alone have 
+          the power to leave his domain. We've traveled dfar and wide to find heroes such as yourself to end our dread lord's curse
+           and put his troubled soul to rest.  Our leader, Madam Eva, knows all. Will you return to Barovia with us and speak with her?"
+        </p>
+        <div class="choices">
+          <button class="opt1" href="#">Agree to accompany them</button>
+          <button class="opt2" href="#">Reject the proposal</button>
+          <button class="opt3" href="#">"What else can you tell me about your lord?"</button>
+          <button class="opt4" href="#">"I should need more information about all this"</button>
+        </div>
+      </section>
+      <section id="section2b" v-show="is2b">
+        <div class="section-img" id="img-section2b"></div>
+        <p>After watching the travelers get drunk for a little while, you start to relaxm thinking that they aren't much of a threat.
+          How can they fight if they can't even walk straight or talk without a slur? And just as you begin to turn around, a young woman with
+          dark curly hair and bright colored clothes grabs you by the shoulder: "You're not leaving just yet. C'mon. My father is waiting."
+        </p>
+        <p>She walks you to the bonfire, where an old man is waiting with the woman's brother, sitting in a log. The old man offers you a
+           wineskin: "We've been waiting for you! My name's Stanimir. Come sit with us. I see you've already met Damia, well, this is Ratka, my son.
+           You can trust us."
+        </p>
+        <p>Damia releases you and lets you take a sit. You deliver the duchess message, to what Stanimir says laughing: 
+          "Don't worry. We have no wish to make enemies of Lady Morwen. I have a story to tell you. First you listen, then we go."
+          Stanimir fills his mouth with wine, then spits into the fire. The flames turn from orange to green. As they dance and sway, a
+          dark shape appears in the bonfire's core.
+        </p>
+        <p>"We come from an ancient land whose name is long forgotten —a land of kings. Our enemies forced us from our homes, and now
+          we wander the lost roads."
+        </p>
+        <p>The dark shape in the fire takes the form of a man being knocked from his horse, a spear piercing his side.</p>
+        <p>Stanimir continues. "One night, a wounded soldier staggered into our camp and collapsed. We nursed his terrible injury
+           and quenched his thirst with wine. He survived. When we asked him who he was, he wouldn't say. All he wanted was to return home, 
+           but we were deep in the ands of his enemies. We took him as one of our own and followed him back toward his homeland. His enemies
+            hunted him. They said he was a prince, yet we didn't give him up, even when their assassins fell upon us like wolves."
+        </p>
+        <p>Deep in the bonfire, you see a dark figure standing with sword drawn, fighting off a host of shadowy shapes.</p>
+        <p>"This man of royal blood fought to protect us, as we protected him. We bore him safely to his home, and he thanked us. 
+          He said, 'I owe you my life. Stay as long as you wish, leave when you choose, and know that you will always be safe here.'"
+        </p>
+        <p>The figure in the dancing fire vanquishes its final foe, then disperses in a cloud of smoke and embers.</p>
+        <p>Stanimir's face becomes a somber mask. "A curse has befallen our noble prince, turning him into a tyrant. We alone have 
+          the power to leave his domain. We've traveled dfar and wide to find heroes such as yourself to end our dread lord's curse
+           and put his troubled soul to rest.  Our leader, Madam Eva, knows all. Will you return to Barovia with us and speak with her?"
+        </p>
+        <div class="choices">
+          <button class="opt1" href="#">Accept their quest.</button>
+          <button class="opt2" href="#">Reject.</button>
+          <button class="opt3" href="#">"What else can you tell me about your lord?"</button>
+          <button class="opt4" href="#">"I should need more information about all this"</button>
+        </div>
+      </section>
+      <section id="section2b" v-show="is2c">
+        <div class="section-img" id="img-section2c"></div>
+        <p>You take out your great sword, gripping its hilt firmly. Without a second of debate, you walk to the nearest drunk and
+           impale him through the back. The travelers start screaming in panic. You see some of them running towards the dark of the woods,
+            and some of them just gaping in horror at what you did.
+        </p>
+        <p>Just before you slay another visitor, you see a sudden flash of green light and hear the voice of a young woman
+          inside your head commanding you to stop. You can't fight it: she is just too strong. You stand amidst the revolting gipsies,
+         trying so hard to fight the stiffness of your muscles.</p>
+         <p>"Why are you doing this? You were supposed to help us!" says an old man that you can't see, "Damia, release them!" You
+            finally regain control over your body, although you still feel the pain of the muscles tensing. When you turn around, you see
+            a young woman with dark, curly hair draped in colorful clothes. Besides her is the old man supporting himself with the help of his son.
+            Grabbing your sword again, you prepare for combat. But this time the old man's son is ready. He points a finger at you and you fall
+             defenseless to the ground, feeling the life draining out of you.
+         </p>
+         <p>You should've been more careful dealing with this people.</p>
+      </section>
+      <section id="section2b" v-show="is2d">
+        <div class="section-img" id="img-section2d"></div>
+        <p>After watching them party, you decide that this isn't that big of deal. Surely they can't hurt anyone in this state. You go back
+           to the duchess tower to tell her that you won't be meddling in her business for now. She can still count on you, but this just isn't
+            worth the trouble. She sighs and dismisses you.
+        </p>
+        <p>You mount up your horse and decide to take the road through the woods to return home. The woods are quiet this night, and the 
+          air grows chill. The fire of your torch sputters as a low mist gathers around the edges of the road, growing closer as the night 
+          wears on. All throughout the night, you think you see shapes, shadows stalking you from deep within the mist. You're not scared of
+           whatever is inside it, you've fought worse, but ocassionally you hear a distant cry that makes your hair stand on its end.
+        </p>
+        <p>By the morning, the fog gans thick in the air, turning the trees around you into gray ghosts. Then you notice these aren't
+           the same trees that surrounded you the night before.
+        </p>
+        <div class="choices">
+          <button class="opt1" href="#">Turn back</button>
+          <button class="opt2" href="#">Wait for the fog to disperse</button>          
+          <button class="opt3" href="#">Keep going, you can't be that far off</button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>      
         <div class="authorship">
           <p>This images do not belong to me (except for the logo). They were pulled out from the internet.
             Thanks to Wizards of the cost for that. If some of the art displayed here belongs to you, please contact me!
@@ -84,8 +210,8 @@
             <p><span>E-mail:</span> <a href="mailto:ezekielmtz@gmail.com">ezekielmtz@gmail.com</a></p>
             <p><span>Teléfono:</span> (+54) 11 xxxx-xxxx</p>
         </div>
-    </footer>
-    <script src="/LoginSys.js"></script>
-    <script src = "/vue.min.js"></script>
+  </footer>
+  <script src = "/vue.min.js"></script>
+  <script src="/MyVue.js"></script>
 </body>
 </html>
