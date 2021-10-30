@@ -98,12 +98,12 @@ const menuIcon = document.querySelector('.menu-icon');
 function toggleMenu() {
     if (menu.classList.contains('show-menu')) {
         menu.classList.remove('show-menu');
-        closeIcon.style.display = 'none';
-        menuIcon.style.display = 'inline';
+        closeIcon.classList.remove('show-menu');
+        menuIcon.classList.add('show-menu');
     } else {
         menu.classList.add('show-menu');
-        closeIcon.style.display = 'inline';
-        menuIcon.style.display = 'none';
+        closeIcon.classList.add('show-menu');
+        menuIcon.classList.remove('show-menu');
     }
 }
 
